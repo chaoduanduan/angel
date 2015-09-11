@@ -1,0 +1,45 @@
+{% extends 'banner.html' %}
+{% block content %}
+<div class='col-sm-8 col-sm-offset-2'>
+{% if not user.is_authenticated %}
+Login Request!!
+{% else %}
+ {% if empty %}
+ {{empty_message}}
+ 
+ {% else %}
+<table class="table table-hover">
+   <thead>
+   
+   <th>VIN_NUMBER</th>
+    <th>MAKE</th>
+    <th>MODEL</th>
+    <th>MILEAGE</th>
+    <th>PRICE</th>
+    
+   </thead>
+   <tfoot>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+   </tfoot>
+    {% for item in cart.products.all %}
+        <tr>
+         <td><a href='{% url "detail" item.slug %}'>{{item.vin_number}}</a></td>
+            <td>{{item.model.make}}</td>
+            <td>{{item.model}}</td>
+            <td>{{item.mileage}}</td>
+            <td>{{item.price}}</td>
+            <td><a href="{{item.slug}}">Remove</a></td>
+          <!--  <td><a href="{% url "remove_from_cart" item.id %}">Remove</a></td> -->
+        </tr>
+     {% endfor %}
+   
+</table>
+</div>
+{% endif %}
+{% endif %}
+{% endblock %}

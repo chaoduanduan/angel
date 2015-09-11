@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Angel Tech</title>
+{% load staticfiles %}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href={% static "css/dropdown.css"%} />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" href={% static "css/bootstrap-theme.min.css" %}/> 		
+<link rel="stylesheet" href={% static "css/bootstrap.min.css" %}>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src={% static "js/jquery.min.js"%}></script>
+<script src={% static "js/bootstrap.min.js"%}></script>
+<style>
+.navbar-brand > img {
+	object-fit: contain;
+	max-height: 300%;
+	height: 300%;
+}
+.navbar {
+	background-color: rgba(3,3,3,.7);   
+	border-color: transparent;
+}
+.starter-template{
+	padding:70px 15px;
+	
+}
+footer{
+	 background: #333;
+	 color: #eee;
+	 font-size: 11px;
+	 padding: 20px; 
+
+}
+ul.unstyled{
+	list-style: none;
+	padding: 0;
+}
+</style>
+</head>
+<body>
+<!-- start header --><!-- start slider -->
+{% load staticfiles %}
+
+ 
+<div class="container" id="main">
+	<div class="navbar transparent navbar-inverse navbar-fixed-top">
+		<div class="container">
+	<!--		<a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a> -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Angel tech</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			 
+			</div>
+			<div id="navbar" class="navbar-collapse collapse navbar-responsive-collapse">
+				<ul class="nav navbar-nav pull-left">
+				  <li><a href="{% url 'home' %}"><span class="glyphicon glyphicon-home"></span><font size="3">Home</font></a></li>
+				  <li><a href="{% url 'upload' %}"><span class="glyphicon glyphicon-usd"></span><font size="3">Sell</font></a></li>
+				  <li><a href="{% url 'cars' %}"><span class="glyphicon glyphicon-shopping-cart"></span><font size="3">Buy</font></a></li>			
+				  <li><a href="{% url 'contact' %}"><span class="glyphicon glyphicon-earphone"></span><font size="3">Contact Us</font></a></li>	  
+				</ul>
+				 <ul class="nav navbar-nav pull-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span><font size="3">My Account</font></a></li>{% if user.is_authenticated %}					
+					
+					<li><a href="{% url 'cart' %}"><span class="glyphicon glyphicon-shopping-cart"></span><font size="3">Cart </font><span class="badge">{% if not request.session.items_total%}0{% else %} {{request.session.items_total}}{% endif %}</span></a></li>
+					<!--need default context processors to make number show up-->
+					{% endif %}
+				</ul>
+			</div>			
+		</div>
+	</div><!-- end navbar-->
+</div><!--end container-->
+<div class="container" id="nav-btm">
+	<div class="starter-template">
+		<div class="row" id="dropdownlist">		
+			<form action="/cars/s/" method="get">
+			<select name="p" id="cat" class="wrapper-dropdown-3">
+				<option val="car"  class="dropdown3">All</option>
+			    {% for a in doubledroplst %}
+				<option val="%s" %({{a}}) class="dropdown3">{{a}}</option>
+				{% endfor %}
+			</select>					 
+		   
+			<select name = q id="item" class='wrapper-dropdown-3'>		
+			   <option class="wrapper-dropdown-3 dropdown3"></option>
+			</select>
+			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>			
+			<div class="input-group col-md-3">	
+				<div class="input-group-addon">mile</div>
+				<input name = x id="item" class="form-control" placeholder = "Min Mileage(Optional)">
+				 <div class="input-group-addon">.00</div>
+				</div>
+			<div class="input-group col-md-3">	
+				<div class="input-group-addon">mile</div>
+			<input name = y id="item" class="form-control" placeholder = "Max Mileage(Optional)">
+			 <div class="input-group-addon">.00</div>
+				</div>
+			<div class="input-group col-md-3">
+				<div class="input-group-addon"> $ </div>
+					<input name = pricedown id="item" class="form-control" placeholder = "Min Price(Optional)">
+					 <div class="input-group-addon">.00</div>
+				</div>
+			<div class="input-group col-md-3">	
+				<div class="input-group-addon"> $ </div>
+					<input name = priceup id="item" class="form-control" placeholder = "Max Price(Optional)">
+					<div class="input-group-addon">.00</div>
+			    </div>		
+			</div>			
+		
+			</form><!--Form for dropdownlist -->
+		</div>
+	</div>
+
+
+<div id="car-content-area">
+	<div class="container">
+	<div class="row">
+		{% for car in cars %}
+	<div class="col-xs-12 col-sm-6 col-md-3">		
+	  <div class="thumbnail">
+		{% for item in car.carimage_set.all %}
+		{% if item.active %}
+		<a href='{% url "detail" car.slug %}'><img src="{{MEDIA_URL}}{{ item.carimage }}" height="230" width="271" /></a>
+		{% endif %}
+		{% endfor %}
+		<div class="caption">
+		 <a href='{% url "detail" car.slug %}'><h3>{{car.model.make}} {{car.model}} </h3></a>
+		  <p>		  
+			<div>Mileage: {{car.mileage}}</div>
+			<div>Price: {{car.price}}</div>		  
+		  </p>
+		</div><!--end of caption-->
+	  </div><!--end of thumbnail-->	 
+	</div><!--end of col-->
+	 {% endfor %}
+  </div><!--end of row-->
+	</div>
+</div>
+<div id="car-pages">
+	<div class="container">
+		<nav>
+		<ul class="pagination">
+			
+				<li>
+				{% if cars.has_previous %}
+					<a href="?page={{ cars.previous_page_number }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+				{% endif %}
+				</li>
+				<li>
+				<span class="current">
+					Page {{ cars.number }} of {{ cars.paginator.num_pages }}.
+				</span>
+				</li>
+				<li>
+				{% if cars.has_next %}
+					<a href="?page={{ cars.next_page_number }}">Next</a>
+				{% endif %}
+				</li>
+			
+		</ul>
+		</nav>
+	</div>
+
+</div>
+
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+			<h6>Copyright &copy; 2015 Angel Tech Auto Service Corporation</h6>
+			</div><!--end of col-sm-2-->
+			<div class="col-sm-4">
+			<h6>About Us</h6>
+			<p>Like us Like usLike us Like usLike us Like usLike us Like usLike us Like usLike us Like usLike us Like usLike us Like usLike us Like usLike us Like usLike us Like usLike us Like us</p>
+			</div>
+						
+			<div class="col-sm-2">
+				<h6>Navigation</h6>
+				<ul class="unstyled">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Links</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			
+			<div class="col-sm-2">
+				<h6>Follow Us</h6>
+				<ul class="unstyled">
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Google Plus</a></li>					
+				</ul>
+				
+			</div>
+			<div class="col-sm-2">
+				<h6>Coded <span class="glyphicon glyphicon-heart"></span> by Angel Tech Auto Services Corporation<h6>
+			</div>
+		</div>
+	</div>
+</footer>
+<script type="text/javascript" >
+	var list3 = new Array();
+	var list4 = new Array();
+	var  x = 0;
+	var  y  =0;
+	var  z  =0;
+</script>
+
+{%for a in doubledownlst %}
+<script type="text/javascript" >
+	list4[z] = '{{a}}'
+	z++
+</script>
+{%endfor%}
+
+<script type="text/javascript" >
+	for (var w = 0; w<list4.length; w++){
+		
+	   list3[w] = new Array(); 
+	}
+</script>
+{%for a in doubledownlst %}
+{%for b in a %}
+	<script type="text/javascript" > 
+	 if (y<2) {	 
+		list3[x][y] = '{{b}}'
+		y++
+	 }
+	 else{
+		 y = 0
+		 x++
+		 list3[x][y] = '{{b}}'
+		 y++
+	 }
+	</script>
+{%endfor%}
+{%endfor%}
+<script type="text/javascript" >  
+var list1 = new Array();
+var list2 = new Array();
+var list5 = new Array();
+var i = 0;
+</script>
+{%for a in doubledroplst %}
+<script type="text/javascript" >
+  var  a = '{{a}}' 
+    list1[i] = a;
+    list2[i] = a;
+    i++
+</script>
+{%endfor%}
+
+
+<script type="text/javascript" >
+	var g =0;
+	for (var e=0; e<list2.length; e++) {
+		list5[e] = new Array();
+		for (var d=0; d<list3.length; d++) {
+			if (list2[e] == list3[d][0]) {		 
+			list5[e][g] = list3[d][1].toString()
+			g++
+		   }   
+		}
+		list5[e][g+1] = "All"
+		g =0;
+	}
+
+	for (var i =0; i<list1.length; i++){
+		list1[i]=list5[i]
+	}
+	car = new Array('All');
+	populateSelect();
+	$(function() {
+    $('#cat').change(function(){
+        populateSelect();
+		});
+	});	
+	function populateSelect(){
+		cat=$('#cat').val();
+		$('#item').html('');
+	
+	for(var i = 0; i<list1.length; i++){
+		if(cat==list2[i].toString('utf-8')){
+			list1[i].forEach(function(t) { 
+				$('#item').append('<option>'+t+'</option>');
+			});
+		}		
+	} 
+    if(cat=='All'){
+        car.forEach(function(t) { 
+            $('#item').append('<option>'+t+'</option>');
+        });
+    }   
+} 
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

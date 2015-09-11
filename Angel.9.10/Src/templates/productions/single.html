@@ -1,0 +1,31 @@
+{% extends "banner.html" %}
+{% block content %}
+<div>
+    <h1><font color="Black">{{product.carName}}</font></h1>
+    <div>
+    {% for item in product.productimage_set.all %}
+    
+     <img src = "{{MEDIA_URL}}{{ item.image }}" height="200" width="200"/></a>       
+    
+    {% endfor %}
+    <form class="navbar-form navbar-right" action='{% url "checkout"%}'>
+        <button type="submit" class="btn btn-success">Checkout</button>				
+    </form>
+    <form class="navbar-form navbar-right" action='{% url "carinfo"%}'>
+        <button type="submit" class="btn btn-success">Back</button>				
+    </form>
+    </div>
+    <div>
+        <font color="blue">
+        <li> Price: {{product.price}}$</li>
+        <li> Exterior Color: {{product.exteriorColor}}</li>
+        <li> Interior Color : {{product.interiorColor}}</li>
+        <li> Mileage : {{product.mileage}} miles</li>
+        <li> Transmission: {{product.transmission}}$</li>
+        <li> Engine: {{product.Engine}}</li>
+        <li> Major Options : {{product.MajorOptions}}</li>
+        
+        </font>
+    </div>
+</div>
+{% endblock%}

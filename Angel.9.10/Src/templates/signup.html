@@ -1,0 +1,14 @@
+{% extends "banner.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class='row'>
+    <div class=col-sm-6 col-sm-offset-3>
+        <form method= 'POST' action=''>{% csrf_token %}
+            <font color="Black">
+            {{form|crispy}}
+             <input type='submit'>
+            </font>>
+        </form>
+    </div>>
+</div>>
+{% endblock %}

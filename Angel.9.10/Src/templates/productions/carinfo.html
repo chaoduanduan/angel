@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Angel Tech</title>
+{% load staticfiles %}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href={% static "css/style.css" %} rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet"  href={% static "css/style3.css" %} /> 
+<link rel="stylesheet" href={% static "css/magnific-popup.css" %} /> 
+<!-- start js -->
+
+	
+<!-- start top_js_button -->
+    <style>
+	#tfheader{
+		background-color:#c3dfef;
+	}
+	#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+</style>
+</head>
+<body>
+<!-- start header --><!-- start slider -->
+<div class="slider_bg">
+<div class="wrap">
+	<div class="slider" id="home"></div>
+</div>
+</div>
+<!-- start main --><!-- start work-page -->
+<div class="work_bg">
+<div class="wrap">
+	<div class="work" id="work">
+		<div class="main_text1">
+			<h2>Angel Tech</h2>
+		</div>		
+		<!-- start grids_of_2 -->
+		<div class="grids_of_2">
+				<div id="tfheader">
+					<form id="tfnewsearch" role="search" action="/carinfo/s/">
+							<input type="text" class="tftextinput" name="q" placeholder="Input Keyword To Get What You want." size="35" maxlength="120">
+							<input type="submit" value="search" class="tfbutton">
+					</form>
+					
+				</div>
+
+	{% for product in products %}
+	
+		<div class="grid_1_of_2">
+		{% for item in product.productimage_set.all %}
+		{% if item.featured %} 
+				<div class="grid_pic">
+					<a href='{% url "single_product" product.slug%}'><img src="{{MEDIA_URL}}{{ item.image }}" height="200" width="200" /></a>
+				</div>
+		{% endif %}
+		{% endfor %}
+				<div class="grid_text">
+					<a href='{{product.get_absolute_url}}'/><h2>{{product.carName}}</h2></a>
+					 <li>Price: {{product.price}}$</li>
+					 <li> Exterior Color: {{product.exteriorColor}}</li>
+					 <li> Interior Color : {{product.interiorColor}}</li>
+					 <li> Mileage : {{product.mileage}} miles</li>
+				</div>
+			</div>
+	{% endfor %}
+		</div>	
+		
+			
+			<div class="clear"></div>
+		</div>	
+		<!-- end grids_of_2 -->
+		<div class="wrk_btn"> <a class="popup-with-zoom-anim" href={% url "home"%}>HomePage</a></div>
+		<!---start-mfp ---->	
+	  <div id="small-dialog" class="mfp-hide">
+			
+				</div>
+			</div>
+			<!---end-mfp ---->	
+	</div>
+</div>
+</div>
+<!-- start service-page --><!-- start contact-page -->
+<div class="footer_bg">
+  <div class="wrap">
+    <div class="wrapper">
+      <div class="footer">
+        <div class="clear">Address 88888888 TEL 8888888888   CopyRight bulabulabula</div>
+	</div>
+</div>
+</div>
+</div>
+<div style="display:none"></div>
+</body>
+</html>
+
+
+
+

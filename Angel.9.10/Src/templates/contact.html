@@ -1,0 +1,86 @@
+{% extends "banner.html" %}
+{% load i18n %}
+
+{% block content %} 
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+    
+<div class="container">
+
+    <div class="row featurette">
+         <div class="col-md-5 col-md-offset-5">
+             <div class="center">
+                 <h3> Contact Us</h3>
+             </div>
+          </div>
+    </div>
+    <div class="progress contact-us">
+        <div class="progress-bar progress-bar-info" style="width: 100%">
+        </div>
+    
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-4">
+            <h4 class="center featurette-heading"><img src={% static  "img/wechat.png" %} alt="Wechat logo bw" width="30" height="30"><span>Wechat</span></h4>
+            <p><span class="text-medium text-right col-md-7">5107031051</span><span class="text-medium col-md-7"></span></p>
+        </div>
+        
+    <div class="col-md-4">
+         <h4 class="center featurette-heading"><img src={% static "img/call.png" %} alt="Qq logo bw" width="30" height="30">Call</h4>
+         <p><span class="text-medium text-right col-md-7">(770)568-0586</span><span class="text-medium col-md-7"></span></p>
+    </div>
+
+    <div class="col-md-4">
+      <h4 class="center featurette-heading">
+        <img src={% static "img/email.png" %} alt="Qq logo bw" width="30" height="30">
+        <span>Email</span>
+      </h4>
+      <p><span class="text-medium col-md-12 center">AngelTechAutoService</span></p>
+      <p><span class="text-medium col-md-12 center">at gmail.com</span></p>
+    </div>
+
+
+    
+<div class="row featurette">
+    <div class="col-md-5 col-md-offset-5">
+        <div class="center">
+          <h3> Follow Us</h3>
+        </div>
+    </div>
+</div>
+<div class="row featurette">
+    <div class="progress col-md-8 col-md-offset-2 contact-us">
+        <div class="progress-bar progress-bar-info" style="width: 100%">
+        </div>      
+    </div>
+
+    <div class="center col-md-4 col-md-offset-2 ">
+      <h4 class="featurette-heading">
+        <img src={% static  "img/wechat.png" %} alt="Wechat logo bw" width="30" height="30">
+        <span>WeChat Public Platform</span>
+      </h4>
+      <img class="fill" src={% static "img/wechat-1.jpg" %} alt=" wechat-1" width="200" height="200">
+      <p class="text-medium">  </p>
+    </div>
+
+    <div class="center col-md-4">
+      <h4 class="featurette-heading">
+        <img src={% static "img/weibo.png" %} alt="Weibo logo bw" width="30" height="30">
+        <a href="http://www.weibo.com/u/5639916509?from=myfollow_all" target="_blank"> Weibo</a>
+      </h4>
+      <img class="width-full" border="0" src={% static "img/weibo-1.jpg"%}>
+    </div>
+
+    <div class="row featurette">
+        <div class="progress col-md-5 col-md-offset-3 contact-us">     
+           <div class="progress-bar progress-bar-info" style="width: 100%">
+           </div>
+        </div>
+        <div class="center col-md-5 col-md-offset-3 ">
+           <h4 class="featurette-heading">
+        </div>    
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,452 @@
+ * {
+    padding: 0;
+    margin: 0;
+  }
+  .fit { /* set relative picture size */
+    max-width: 100%;
+    max-height: 600px;
+  }
+  .center {
+    display: block;
+    margin: auto;
+  }
+  
+  
+
+.box-container1 {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    
+    background-position: center;
+}
+
+body {
+	height:auto;
+}
+
+
+#maze {
+    position:relative;
+    top:0px;
+    left:0px;
+    height:600px;
+    background-image: url("images/spiral.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top:50px;
+    margin: auto;
+}
+
+
+.thumbnail {
+width: 320px;
+height: 240px;
+}
+.image { width: 100%; height: 100%; }
+.image img {
+-webkit-transition: all 1s ease; /* Safari and Chrome */
+-moz-transition: all 1s ease; /* Firefox */
+-ms-transition: all 1s ease; /* IE 9 */
+-o-transition: all 1s ease; /* Opera */
+transition: all 1s ease;
+}
+.image:hover img {
+-webkit-transform:scale(1.25); /* Safari and Chrome */
+-moz-transform:scale(1.25); /* Firefox */
+-ms-transform:scale(1.25); /* IE 9 */
+-o-transform:scale(1.25); /* Opera */
+transform:scale(1.25); }
+
+
+div.wrapper {
+
+  width: 100%;
+  height: auto;
+}
+a img {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -moz-transition: -moz-transform 0.4s ease;
+  -o-transition: -o-transform 0.4s ease;
+  transition: transform 0.4s ease;
+}
+a img:hover {
+  -webkit-transform: scale(3);
+  -moz-transform: scale(3);
+  -ms-transform: scale(3);
+  -o-transform: scale(3);
+  transform: scale(3);
+}
+
+#wash-icon {
+    position:relative;
+    left:300px;
+    top:400px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#buy-sell {
+    position:relative;
+    height:600px;
+    background: #2E8B57;
+    margin: auto;
+}
+
+
+#buy-icon{
+    position:relative;
+    left:150px;
+    bottom:100px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#sell-icon{
+    position:relative;
+    left:75px;
+    bottom:75px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#rental-icon{
+    position:relative;
+    left:130px;
+    bottom:300px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#forum {
+    position:relative;
+    height:600px;
+    background: #CD853F;
+    margin: auto;
+}
+
+#forum-icon{
+    position:relative;
+    left:50px;
+    top:50px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#license {
+    position:relative;
+    height:600px;
+    background: #FF0000;
+}
+
+#license-icon{
+    position:relative;
+    left:-200px;
+    bottom:300px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#auto-services {
+    position:relative;
+    height:600px;
+    background: #FFDAB9;
+    
+}
+
+#repair-icon{
+    position:relative;
+    right:100px;
+    top:100px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#insurance-icon{
+    position:relative;
+    right:230px;
+    bottom:50px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#detail-icon{
+    position:relative;
+    right:100px;
+    bottom:20px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#finance-icon{
+    position:relative;
+    right:100px;
+    top:200px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#parts-icon{
+    position:relative;
+    left:-50px;
+    top:-500px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.thumbnail {
+width: 320px;
+height: 240px;
+}
+.image { width: 100%; height: 100%; }
+.image img {
+-webkit-transition: all 1s ease; /* Safari and Chrome */
+-moz-transition: all 1s ease; /* Firefox */
+-ms-transition: all 1s ease; /* IE 9 */
+-o-transition: all 1s ease; /* Opera */
+transition: all 1s ease;
+}
+.image:hover img {
+-webkit-transform:scale(1.25); /* Safari and Chrome */
+-moz-transform:scale(1.25); /* Firefox */
+-ms-transform:scale(1.25); /* IE 9 */
+-o-transform:scale(1.25); /* Opera */
+transform:scale(1.25); }
+
+
+div.wrapper {
+
+  width: 100%;
+  height: auto;
+}
+a img {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -moz-transition: -moz-transform 0.4s ease;
+  -o-transition: -o-transform 0.4s ease;
+  transition: transform 0.4s ease;
+}
+a img:hover {
+  -webkit-transform: scale(3);
+  -moz-transform: scale(3);
+  -ms-transform: scale(3);
+  -o-transform: scale(3);
+  transform: scale(3);
+}
+
+
+.footer {
+    width: 100px;
+    
+}
+.footer a {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.sign-up {
+  position:absolute;
+  right:20px;
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  
+}
+
+.login {
+  position:absolute;
+  right:100px;
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+
+   list-style-type:none;	
+   background: rgba(0,0,0,0.4);
+   background-color: transparent;
+   padding-bottom:21px;
+}
+
+#navbar-inner-menu {
+	position:absolute;
+	width:856px;
+	height: 43px;
+	line-height:43px;
+	padding:0 0 0 34px;
+    text-align: center;
+	z-index:2;
+}
+#navbar-inner-main {
+    line-height:43px;
+	position:relative;
+	font-size: 24px;
+    text-align: center;
+}
+
+#navbar-inner li {
+	position: relative;
+    top:-5px;
+	text-align: center;
+	padding:0 0 0 10px;
+}
+
+
+
+
+.navbar {
+  padding: 10px 0px 10px 0px; }
+  .navbar.navbar-inverse {
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #585858; }
+    .navbar.navbar-inverse.navbar-static-top {
+      background-color: #252528; }
+      .navbar.navbar-inverse.navbar-static-top .container {
+        margin-top: 0;
+        margin-bottom: 0; }
+    .navbar.navbar-inverse .nav > li > a {
+      font-size: 13px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+      opacity: .6;
+      filter: alpha(opacity=60);
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      transition: all .2s linear;
+      padding: 10px 15px 10px;
+      text-decoration: none; }
+      .navbar.navbar-inverse .nav > li > a:hover, .navbar.navbar-inverse .nav > li > a:active {
+        color: #fff;
+        opacity: 1;
+        filter: alpha(opacity=100); }
+    .navbar.navbar-inverse .nav > li.active > a {
+      color: #fff;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      background-color: transparent; }
+  .navbar.sticky {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #252525; }
+    .navbar.sticky .container {
+      margin-top: 0px !important;
+      margin-bottom: 0px !important; }
+  .navbar .container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-transition: margin .2s ease-in-out;
+    -moz-transition: margin .2s ease-in-out;
+    transition: margin .2s ease-in-out; }
+    .navbar .container .navbar-header .navbar-brand {
+      color: #fff;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+      font-size: 20px;
+      margin-left: -20px;
+      padding: 10px 20px 10px; }
+    .navbar .container .collapse .nav .dropdown .caret {
+      margin-bottom: 4px; }
+    .navbar .container .collapse .nav .dropdown .dropdown-menu {
+      background: #252528;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      margin-top: 2px; }
+      .navbar .container .collapse .nav .dropdown .dropdown-menu > li > a {
+        color: #fff; }
+        .navbar .container .collapse .nav .dropdown .dropdown-menu > li > a:hover {
+          background: #08c; }
+          
+          
+          .language-picker{padding:20px 30px 20px 20px;position:relative}
+          .global-nav
+          .language-picker label{font-size:12px;color:#c2c2c2;text-transform:uppercase}
+          .global-nav .language-picker select{display:block;width:100%;margin-top:5px;padding:8px;background-color:#070716;border:2px solid #1fbad6;
+          -webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;font-size:12px;color:#fff;text-transform:uppercase;-webkit-appearance:none;cursor:pointer}
+          .global-nav .language-picker .dd-arrow{position:absolute;right:42px;top:59px;font-size:11px;color:#1fbad6}
+          .global-nav .download-apps{margin:0 auto}.global-nav .download-apps .apple-store,.global-nav .download-apps
+          .google-play,.global-nav .download-apps .windows-store{margin:8px auto;display:block;float:clear;text-align:left;padding-left:20px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
+          .global-nav.open{display:block}.focused .global-nav{display:none}@media screen and (max-width:1000px) and (min-width:500px){.global-header .menu .icon-menu{top:-23px}}
+          @media screen and (max-width:500px){.global-nav{position:absolute;background:0 0}.global-header{padding:18px 0 18px 5px}.global-header .menu{padding-top:2px}
+          .global-header .menu .icon-menu{padding:0;position:static;top:0}.global-header .actions{position:relative;left:-7px}.global-header .actions a{padding:5px 8px;border-width:1px}
+          .global-header .uber-logo{width:90px;height:13px;top:0;background:transparent url(https://d1a3f4spazzrp4.cloudfront.net/web-fresh/global/logo-mobile-light@1x.png) no-repeat left top;background-size:90px 13px}
+          .light .global-header .uber-logo{width:90px;height:13px;background:transparent url(https://d1a3f4spazzrp4.cloudfront.net/web-fresh/global/logo-mobile-dark@1x.png) no-repeat left top;background-size:90px 13px}
+          .actions .btn{padding:6px 8px;font-size:7px}.global-nav .actions{padding:0 25px 19px 20px}.global-nav .actions .hello{margin:18px 0 0}.global-nav .actions .dashboard{margin-bottom:8px}
+          .global-nav .primary{margin-bottom:17px}.global-nav .primary a{padding:5px 20px}.global-nav .secondary>p{padding-top:12px;padding-bottom:4px}}
+          @media screen and (max-width:500px) and (-webkit-min-device-pixel-ratio:2),screen and (max-width:500px) and (min--moz-device-pixel-ratio:2),screen and (max-width:500px) and (-moz-min-device-pixel-ratio:2),screen and (max-width:500px) and (-ms-min-device-pixel-ratio:2),screen and (max-width:500px) and (min-device-pixel-ratio:2),screen and (max-width:500px) and (min-resolution:192dpi){.global-header .uber-logo{background:transparent url(https://d1a3f4spazzrp4.cloudfront.net/web-fresh/global/logo-mobile-light@2x.png) no-repeat left top}}
+          @media screen and (max-width:500px) and (-webkit-min-device-pixel-ratio:2),screen and (max-width:500px) and (min--moz-device-pixel-ratio:2),screen and (max-width:500px) and (-moz-min-device-pixel-ratio:2),screen and (max-width:500px) and (-ms-min-device-pixel-ratio:2),screen and (max-width:500px) and (min-device-pixel-ratio:2),screen and (max-width:500px) and (min-resolution:192dpi){.global-header .uber-logo{background-size:90px 12px}}@media screen and (max-width:500px) and (-webkit-min-device-pixel-ratio:2),screen and (max-width:500px) and (min--moz-device-pixel-ratio:2),screen and (max-width:500px) and (-moz-min-device-pixel-ratio:2),screen and (max-width:500px) and (-ms-min-device-pixel-ratio:2),screen and (max-width:500px) and (min-device-pixel-ratio:2),screen and (max-width:500px) and (min-resolution:192dpi){.light .global-header .uber-logo{background:transparent url(https://d1a3f4spazzrp4.cloudfront.net/web-fresh/global/logo-mobile-dark@2x.png) no-repeat left top}}@media screen and (max-width:500px) and (-webkit-min-device-pixel-ratio:2),screen and (max-width:500px) and (min--moz-device-pixel-ratio:2),screen and (max-width:500px) and (-moz-min-device-pixel-ratio:2),screen and (max-width:500px) and (-ms-min-device-pixel-ratio:2),screen and (max-width:500px) and (min-device-pixel-ratio:2),screen and (max-width:500px) and (min-resolution:192dpi){.light .global-header .uber-logo{background-size:90px 12px}}
+          .global-footer{
+	height:auto;
+	padding-top:12px;
+	position:relative;
+	background-color:#070716
+}.global-footer
+          .social{padding:40px 15px;text-align:left}
+          .global-footer .social a{margin-right:5px;padding:8px;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;font-size:12px;border:1px solid #fff;color:#fff}
+          .global-footer .social a:hover{border-color:#070716;background-color:#fff;color:#070716}
+          .global-footer .navs{text-align:center;text-transform:uppercase}
+          .global-footer .navs .current-lng{display:inline-block;padding-top:14px}
+          .global-footer .navs .language-picker{text-align:center}
+          .global-footer .navs .language-picker select{padding:10px 0 0 0;-webkit-appearance:none;background-color:transparent;border:none;outline:0;position:relative;left:0;top:-36px;text-indent:-5000px}
+          .global-footer .sign-up{padding:7px 25px;background-color:#1fbad6;position:relative;top:-23px;font-size:14px;color:#fff}
+          .global-footer .primary{
+	padding-top:10px;
+	color:#fff;
+	text-align: center;
+}
+          .global-footer .primary a{padding:0 15px;font-size:15px;color:#fff}
+          .global-footer .secondary a{padding:0 10px;font-size:10px;color:#c2c2c2}
+          .global-footer .downloads a{border:1px solid #fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
+          .light-foot .global-footer{background-color:#fff}
+          .light-foot .global-footer .primary,.light-foot .global-footer .primary a{color:#070716}
+          .light-foot .global-footer .secondary a{color:#999}.light-foot .global-footer .social a{border:none;background-color:#070716;border:1px solid transparent;color:#fff;text-align:center}
+          .light-foot .global-footer .social a:hover{background-color:#fff;color:#070716;border:1px solid #070716}
+          @media screen and (max-width:500px)
+          {.global-footer{min-height:145px;text-align:center}
+          .global-footer .sign-up{margin:0 25px;padding:14px 40px;top:-36px;font-size:16px}
+          .global-footer .social{padding:10px;text-align:center}
+          .global-footer .social a{margin:0 5px;padding:16px;-webkit-border-radius:24px;-moz-border-radius:24px;border-radius:24px;border:2px solid #fff;color:#fff}
+          .global-footer .social a:last-child{margin-right:none}}[lang=he-IL],[lang=he],[lang=ar-SA],[lang=ar]
+          {direction:rtl;unicode-bidi:bidi-override}[lang^=pl] p,[lang^=vi] p,[lang^=cs] p,[lang^=ro] p,[lang^=ru] p,[lang^=pl] a,[lang^=vi] a,[lang^=cs] a,[lang^=ro] a,[lang^=ru] a,[lang^=pl] h1,[lang^=vi] h1,[lang^=cs] h1,[lang^=ro] h1,[lang^=ru] h1,[lang^=pl] h2,[lang^=vi] h2,[lang^=cs] h2,[lang^=ro] h2,[lang^=ru] h2,[lang^=pl] h3,[lang^=vi] h3,[lang^=cs] h3,[lang^=ro] h3,[lang^=ru] h3,[lang^=pl] h4,[lang^=vi] h4,[lang^=cs] h4,[lang^=ro] h4,[lang^=ru] h4,[lang^=pl] h5,[lang^=vi] h5,[lang^=cs] h5,[lang^=ro] h5,[lang^=ru] h5,[lang^=pl] li,[lang^=vi] li,[lang^=cs] li,[lang^=ro] li,[lang^=ru] li,[lang^=pl] select,[lang^=vi] select,[lang^=cs] select,[lang^=ro] select,[lang^=ru] select,[lang^=pl] option,[lang^=vi] option,[lang^=cs] option,[lang^=ro] option,[lang^=ru] option,[lang^=pl] input,[lang^=vi] input,[lang^=cs] input,[lang^=ro] input,[lang^=ru] input,[lang^=pl] button,[lang^=vi] button,[lang^=cs] button,[lang^=ro] button,[lang^=ru] button,[lang^=pl] label,[lang^=vi] label,[lang^=cs] label,[lang^=ro] label,[lang^=ru] label{font-family:sans-serif}[lang^=pl] h1,[lang^=vi] h1,[lang^=cs] h1,[lang^=ro] h1,[lang^=ru] h1,[lang^=pl] h2,[lang^=vi] h2,[lang^=cs] h2,[lang^=ro] h2,[lang^=ru] h2,[lang^=pl] h3,[lang^=vi] h3,[lang^=cs] h3,[lang^=ro] h3,[lang^=ru] h3{font-weight:700}.yui-grid-hack{margin-left:-2px}
+          
+          .site-wrapper .grid-locked{width:100%;max-width:1228px;margin:0 auto}.site-wrapper .grid-squeezed{padding:0 90px}.site-wrapper.menu-showing{width:100%;right:-285px}.site-wrapper.menu-showing .grid-locked{width:936px}.site-wrapper.menu-showing .grid-squeezed{padding:0}.focused .global-footer,.focused .global-header{display:none}
+          
+          
+          
+          
+          
+          

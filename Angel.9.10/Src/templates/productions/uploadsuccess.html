@@ -1,0 +1,7 @@
+{% extends "banner.html"%}
+{% block content%}
+<p>You have successfully upload the car information!</p>
+ <form class="navbar-form navbar-right" action='{% url "home"%}'>
+        <button type="submit" class="btn btn-success">Back</button>				
+ </form>
+{% endblock%}

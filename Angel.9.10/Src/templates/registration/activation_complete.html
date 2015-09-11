@@ -1,0 +1,21 @@
+{% extends "banner.html" %}
+{% load i18n %}
+
+{% block content %}
+<p class='lead'>{% trans "Your account is now activated." %}</p>
+<script> 
+var t=3;//设定跳转的时间 
+setInterval("refer()",1000); //启动1秒定时 
+function refer(){ 
+if(t==0){ 
+location="{% url 'home' %}"; //#设定跳转的链接地址 
+} 
+document.getElementById('show').innerHTML=""+t+" back to home"; // 显示倒计时 
+t--; // 计数器递减
+
+//本文转自： 
+} 
+</script> 
+<span id="show"></span>
+<li><a  href="{% url 'home' %}">Home</a></li>
+{% endblock %}
